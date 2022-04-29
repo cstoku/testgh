@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: chrisdickinson/setup-yq@latest
+      - uses: frenck/action-setup-yq@v1
       - uses: imranismail/setup-kustomize@v1
       - run: |
           yq --version
