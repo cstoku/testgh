@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: frenck/action-setup-yq@v1
+      - uses: freenet-actions/setup-yq@v1
       - uses: imranismail/setup-kustomize@v1
       - run: |
           yq --version
-          kustomize --version
+          kustomize version
