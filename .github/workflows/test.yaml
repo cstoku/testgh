@@ -1,0 +1,14 @@
+name: CI/CD
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: mikefarah/yq@master
+      - uses: karancode/kustomize-github-action@master
+      - run: |
+          kustomize
+          yq
