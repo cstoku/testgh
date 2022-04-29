@@ -8,7 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: freenet-actions/setup-yq@v1
+        with:
+          version: 4.25.1
       - uses: imranismail/setup-kustomize@v1
+        with:
+          version: 4.5.4
       - run: |
           yq --version
           kustomize version
